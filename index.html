@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS Configuration  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            },
+            BackgroundImage:{
+              contact:"url('./images/bg.jpg')",
+            },
+          }
+        }
+      }
+    </script>
     <style>
         body{
             font-family: "Manrope", sans-serif;
@@ -21,77 +36,87 @@
 </head>
 <body>
    <!-- Navber Starts Here  -->
-   <header class=" bg-zinc-200">
-    <div class="container mx-auto">
-        <nav>
-        <div class="navbar">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div 
-                        tabindex="0" role="button" class="btn      btn-ghost lg:hidden">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <ul class="menu lg:menu-horizontal px-7">
-                                <li><a  href=""></a>Home</li>
-                                <li><a  href=""></a>Service</li>
-                                <li><a  href=""></a>Portfolio</li>
-                                <li><a  href=""></a>Blogs</li>
-                                <li><a  href=""></a>Contact Us</li>
-                    </ul>
-                </div>
-                <a class="text-3xl font-bold"><i class="fa-solid fa-arrow-right -rotate-45 rounded-full p-3 mr-4 bg-[#ABEF5F]"></i >Rinterio</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li class="font-semibold"><a>Home</a></li>
-                <li><a>Service</a></li>
-                <li><a>Portfolio</a></li>
-                <li><a>Blogs</a></li>
-                <li><a>Contact Us</a></li>
-              </ul>
+  <header class="bg-zinc-200 ">        
+    <nav class="w-11/12 mx-auto">
+      <div class="navbar">
+        <div class="navbar-start gap-0">
+          <button class="px-5 py-3"><i class="fa-solid fa-arrow-right bg-lime-500 text-black rounded-full -rotate-45 p-2 "></i></button>
+          <a class="text-2xl font-semibold">Rinterio</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class=" font-bold"><a>Home</a></li>
+            <li><a>Services</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Blogs</a></li>
+            <li><a>Contact Us</a></li>
+              
+          </ul>
+        </div>
+        <div class="navbar-end">
+           <!-- icon group -->
+          <div class="hidden sm:block">
+            <div class="space-x-2 justify-end ">
+              <i class="fa-solid fa-magnifying-glass "></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+              <button class="px-5 py-3 bg-lime-400 rounded-full">Book Consult <i class="fa-solid fa-arrow-right bg-black text-gray-100 rounded-full -rotate-45  p-2 "></i></button>
+          </div>
+          </div>
+        <!-- Icon groups -->
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-            <div class="navbar-end ml-0">
-                <ul class="flex">
-                    <i class="fa-solid fa-magnifying-glass mr-2 bg-white rounded-full p-4"></i>
-                    <i class="fa-solid fa-cart-shopping mr-2 bg-white rounded-full p-4"></i>
-                    <a class="btn bg-[#abef5f] rounded-3xl font-bold text-lg ">Book Consult<i class="fa-solid fa-arrow-right p-3 rounded-full bg-black text-white -rotate-45"></i></a>
-                </ul>
-            </div>
-        </div>      
-        </nav>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3  p-2 shadow right-0">
+              <li class=" font-bold"><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>     
    <!-- Navber Ends  Here  -->
     <!-- Banner Section Starts  -->
-     <Main>
-        <Section class="bg-zinc-200  ">
-            <div class="my-7 mx-2">
-                <div class="w-1/2 mx-auto ">
-                <img class=""  src="./images/banner.png" alt="">
-                <h1 class="text-5xl font-bold mb-4">A barn house of this design has a striking appearance</h1>
-                <p class="text-xs mb-4">This combination not only makes the barn house visually appealing but also enhances its livability, offering a perfect retreat that feels both timeless and innovative. </p>
-                <a class="btn bg-lime-100 rounded-3xl font-bold text-lg mb-4 ">View Details<i class="fa-solid fa-arrow-right p-3 rounded-full bg-black text-white -rotate-45"></i></a>
+     <Main >
+        <Section class="">
+            <div class="w-9/12 mx-auto">
+                <div class=" w-full md:w-2/4 mx-auto">
+                  <img class=""  src="./images/banner.png" alt="">
+                </div>
+                  <div class="w-full md:w-2/4 mx-auto">
+                  <h1 class=" text-2xl md:text-5xl font-bold mb-4">A barn house of this design has a striking appearance</h1>
+                <p class=" mb-4 text-[#494949]">This combination not only makes the barn house visually appealing but also enhances its livability, offering a perfect retreat that feels both timeless and innovative. </p>
+                <div class="flex md:justify-start justify-center">
+                  <a class="btn bg-lime-100 rounded-3xl font-bold text-lg mb-4 ">View Details<i class="fa-solid fa-arrow-right p-3 rounded-full bg-black text-white -rotate-45"></i></a>
+                  </div>
                 </div>
             </div>
         </Section>
          <!-- Banner Section Ends  -->
           <!-- About Us Section starts -->
         <section class="bg-zinc-200 mt-24 mb-24 ">
-            <div class=" w-2/4 mx-auto  grid grid-cols-1 lg:grid-cols-2 space-x-6 items-center justify-center">
+            <div class=" w-9/12 mx-auto  grid grid-cols-1 lg:grid-cols-2 space-x-6 items-center justify-center">
                 <div>
-                    <img src="./images/Vector.png" alt="">
-                    <button class="bg-white rounded-xl p-4 "></i> <i class="fa-solid fa-arrow-right"></i>About Us</button>
-                    <h1 class="text-4xl font-bold mt-4 mb-4">We design thoughtful, liveable spaces</h1>
+                     <img class="hidden md:block" src="./images/Vector.png" alt="">
+                    <div class="flex md:justify-start justify-center">
+                      <button class="bg-white rounded-xl p-4 "></i> <i class="fa-solid fa-arrow-right"></i>About Us</button>
+                    </div>
+                    <h1 class="text-2xl md:text-6xl font-bold  mt-4 mb-4 ">We design thoughtful, liveable spaces</h1>
                     <p class="text-xs mb-4">Rinterio's barn houses are designed to be both aesthetically striking and highly functional, providing a distinctive living experience that appeals to those who appreciate the beauty of nature and the comfort of modern living.</p>
             <!-- Commercial Section -->
        <div class="space-y-5 mb-4">
@@ -285,11 +310,16 @@
     <button class="bg-[#ABEF5F33] rounded-xl p-4 "></i> <i class="fa-solid fa-arrow-right"></i>Let’s Connect</button> 
     <h1 class="text-5xl font-bold text-center mt-5 mb-5">Let’s Discuss Next Project</h1>
    <p class=" w-3/4 text-center mx-auto">We Rinterio real estate company are wating for your call ans message.Feel free to contact with us for your next project.</p>
-  <section class="">
-    
+  <!-- Form Section Starts  -->
+  <section class=" bg-[url('./images/bg.jpg')] bg-no-repeat bg-cover py-24 px-11 ">
+   
     
 
-  </section>
+    
+
+   </section>
+  <!-- Form Section Ends  -->
+  
 
  <!-- Contact Section Ends   -->
 
